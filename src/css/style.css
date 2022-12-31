@@ -86,7 +86,6 @@ body {
   background-color: white;
 }
 
-/* learned */
 .about .item {
   display: flex;
   flex-direction: column;
@@ -160,22 +159,186 @@ body {
   background-size: cover;
 }
 
+/* FIX */
 /* SERVICES */
 .services {
   grid-area: services;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50vh;
+  text-align: center;
+}
+
+.services .cherry,
+.orange {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.services .cherry h3,
+.orange h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(231, 10%, 27%);
+  margin-bottom: 20px;
+}
+
+.services .cherry p,
+.orange p {
+  font-size: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  max-width: 390px;
+  margin-bottom: 50px;
+  color: hsl(231, 10%, 27%);
+}
+
+.services .cherry {
+  background: url("/src/img/desktop/image-graphic-design.jpg") center center
+    no-repeat;
+  background-size: cover;
+}
+
+.services .orange {
+  background: url("/src/img/desktop/image-photography.jpg") center center
+    no-repeat;
+  background-size: cover;
 }
 
 /* CLIENT-TESTIMONIALS */
 .client-testimonials {
   grid-area: client-testimonials;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title title"
+    "client-1 client-2 client-3";
+  padding: 10%;
+}
+
+.client-testimonials .title {
+  grid-area: title;
+  text-align: center;
+  font-size: 1.5rem;
+  color: hsl(210, 4%, 67%);
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.client-testimonials .image img {
+  width: 70px;
+  border-radius: 50px;
+}
+
+.client-testimonials .image {
+  margin-bottom: 50px;
+}
+
+.client-testimonials .comment {
+  font-size: 1.5rem;
+  text-align: center;
+  color: hsl(210, 3%, 45%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  max-width: 400px;
+  margin-bottom: 80px;
+}
+
+.client-testimonials .info {
+  text-align: center;
+}
+
+.client-testimonials .info h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: hsl(231, 10%, 27%);
+  margin-bottom: 15px;
+}
+
+.client-testimonials .info p {
+  font-size: 1.3rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: hsl(210, 4%, 67%);
+}
+
+.client-testimonials .client-1 {
+  grid-area: client-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-testimonials .client-2 {
+  grid-area: client-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-testimonials .client-3 {
+  grid-area: client-3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* PROJECTS */
 .projects {
   grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.projects img {
+  height: 100%;
 }
 
 /* FOOTER */
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 0;
+  background-color: hsl(168, 39%, 59%);
+}
+
+.footer .footer-logo img {
+  width: 150px;
+}
+
+.footer .footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer nav ul {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.footer nav ul li a {
+  font-family: "Barlow", sans-serif;
+  color: hsl(168, 34%, 41%);
+  transition: 0.3s;
+}
+
+.footer nav ul li a:hover {
+  color: #fff;
+}
+
+.footer .social-medias a {
+  margin-left: 30px;
 }
