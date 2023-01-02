@@ -118,7 +118,7 @@ body {
   height: 79vh;
   position: relative;
 
-  background: url("/src/img/desktop/image-header.jpg") center center no-repeat;
+  background: url("../img/desktop/image-header.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -203,13 +203,13 @@ body {
 }
 
 .about .image.image-egg {
-  background: url("/src/img/desktop/image-transform.jpg") center center
+  background: url("../img/desktop/image-transform.jpg") center center
     no-repeat;
   background-size: cover;
 }
 
 .about .image.image-glass {
-  background: url("/src/img/desktop/image-stand-out.jpg") center center
+  background: url("../img/desktop/image-stand-out.jpg") center center
     no-repeat;
   background-size: cover;
 }
