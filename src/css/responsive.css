@@ -51,7 +51,7 @@
 
   /* HERO */
   .hero {
-    background: url("/src/img/mobile/image-header.jpg") center center no-repeat;
+    background: url("../img/mobile/image-header.jpg") center center no-repeat;
     background-size: cover;
   }
 
@@ -87,7 +87,7 @@
 
   .about .image.image-egg {
     grid-area: image-egg;
-    background: url("/src/img/mobile/image-transform.jpg") center center
+    background: url("../img/mobile/image-transform.jpg") center center
       no-repeat;
     background-size: cover;
   }
@@ -98,7 +98,7 @@
 
   .about .image.image-glass {
     grid-area: image-glass;
-    background: url("/src/img/mobile/image-stand-out.jpg") center center
+    background: url("../img/mobile/image-stand-out.jpg") center center
       no-repeat;
     background-size: cover;
   }
