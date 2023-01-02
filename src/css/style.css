@@ -34,23 +34,78 @@ body {
   background-color: rgb(62, 191, 255);
 }
 
-.header .menu {
+.header ul {
   display: flex;
 }
 
-.header .menu li a {
+.header ul li a {
   color: white;
 }
 
-.header .menu li {
+.header ul li {
   margin: 0px 10px;
   padding: 20px 35px;
   transition: 0.3s;
 }
 
-.header .menu li:hover {
+.header ul li:hover {
   border-radius: 50px;
   background-color: skyblue;
+}
+
+/* HAMBURGUER MENU */
+.header .menu {
+  display: none;
+  width: 60px;
+  height: 60px;
+}
+
+.header .hamburguer {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.header .hamburguer:before,
+.header .hamburguer:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+}
+
+.header .hamburguer:before {
+  top: -10px;
+}
+
+.header .hamburguer:after {
+  bottom: -10px;
+}
+
+.header input {
+  display: none;
+}
+
+.header input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+
+.header input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.header input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
 }
 
 /* HERO */
@@ -159,26 +214,29 @@ body {
   background-size: cover;
 }
 
-/* FIX */
 /* SERVICES */
-.services {
+/* .services {
   grid-area: services;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 50vh;
-  text-align: center;
+}
+
+.services .service {
+  padding: 40% 10%;
 }
 
 .services .cherry,
 .orange {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
 .services .cherry h3,
 .orange h3 {
+  position: absolute;
+  bottom: 140px;
   font-family: "Fraunces", serif;
   font-weight: 700;
   color: hsl(231, 10%, 27%);
@@ -187,6 +245,8 @@ body {
 
 .services .cherry p,
 .orange p {
+  position: absolute;
+  bottom: 30px;
   font-size: 1.5rem;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
@@ -196,16 +256,18 @@ body {
 }
 
 .services .cherry {
+  position: relative;
   background: url("/src/img/desktop/image-graphic-design.jpg") center center
     no-repeat;
   background-size: cover;
 }
 
 .services .orange {
+  position: relative;
   background: url("/src/img/desktop/image-photography.jpg") center center
     no-repeat;
   background-size: cover;
-}
+} */
 
 /* CLIENT-TESTIMONIALS */
 .client-testimonials {

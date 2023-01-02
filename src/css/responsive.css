@@ -1,5 +1,168 @@
 @media (min-width: 1920px) {
- body {
-  margin: 0 20%;
- }
+  body {
+    margin: 0 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HEADER */
+  .header nav ul {
+    display: none;
+  }
+
+  /* HAMBURGUER MENU */
+  .header .menu {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .header nav label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header input:checked ~ ul {
+    display: block;
+  }
+
+  .header nav {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 1;
+    /* vai ficar por cima de tudo na página */
+  }
+
+  .header nav ul li {
+    text-align: center;
+    padding: 10px;
+    transition: 0.5s;
+  }
+
+  .header nav ul li:hover {
+    background-color: orange;
+  }
+
+  .header nav ul {
+    width: 200px;
+    background-color: lightskyblue;
+    padding: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    background: url("/src/img/mobile/image-header.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  .hero h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .hero .arrow {
+    position: absolute;
+    bottom: 200px;
+  }
+
+  /* ABOUT */
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "image-egg"
+      "item-1"
+      "image-glass"
+      "item-2";
+  }
+
+  .about .item {
+    padding: 10%;
+  }
+
+  .about .item:nth-child(4) h2 {
+    width: 290px;
+  }
+
+  .about .image.image-egg {
+    grid-area: image-egg;
+    background: url("/src/img/mobile/image-transform.jpg") center center
+      no-repeat;
+    background-size: cover;
+  }
+
+  .about .item.item-1 {
+    grid-area: item-1;
+  }
+
+  .about .image.image-glass {
+    grid-area: image-glass;
+    background: url("/src/img/mobile/image-stand-out.jpg") center center
+      no-repeat;
+    background-size: cover;
+  }
+
+  .about .item.item-2 {
+    grid-area: item-2;
+  }
+
+  /* SERVICES */
+
+  /* .services {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .services .service {
+    padding: 70% 5%;
+  }
+
+  .services .cherry p,
+  .orange p {
+    bottom: 10px;
+    max-width: 340px;
+  }
+
+  .services .cherry {
+    background: url("/src/img/mobile/image-graphic-design.jpg") center center
+      no-repeat;
+    background-size: cover;
+  }
+
+  .services .orange {
+    background: url("/src/img/mobile/image-photography.jpg") center center
+      no-repeat;
+    background-size: cover;
+  } */
+
+  /* CLIENT-TESTIMONIALS */
+
+  .client-testimonials {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "client-1"
+      "client-2"
+      "client-3";
+  }
+
+  .client-testimonials .client-1,
+  .client-2,
+  .client-3 {
+    margin-bottom: 50px;
+  }
+
+  .client-testimonials .image {
+    margin-bottom: 20px;
+  }
+
+  .client-testimonials .comment {
+    margin-bottom: 30px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
