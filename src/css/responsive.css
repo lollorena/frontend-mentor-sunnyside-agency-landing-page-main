@@ -1,9 +1,3 @@
-@media (min-width: 1920px) {
-  body {
-    margin: 0 20%;
-  }
-}
-
 @media (max-width: 768px) {
   /* HEADER */
   .header nav ul {
@@ -30,7 +24,6 @@
     top: 8px;
     right: 0;
     z-index: 1;
-    /* vai ficar por cima de tudo na página */
   }
 
   .header nav ul li {
@@ -87,8 +80,7 @@
 
   .about .image.image-egg {
     grid-area: image-egg;
-    background: url("../img/mobile/image-transform.jpg") center center
-      no-repeat;
+    background: url("../img/mobile/image-transform.jpg") center center no-repeat;
     background-size: cover;
   }
 
@@ -98,8 +90,7 @@
 
   .about .image.image-glass {
     grid-area: image-glass;
-    background: url("../img/mobile/image-stand-out.jpg") center center
-      no-repeat;
+    background: url("../img/mobile/image-stand-out.jpg") center center no-repeat;
     background-size: cover;
   }
 
@@ -108,33 +99,9 @@
   }
 
   /* SERVICES */
-
-  /* .services {
+  .services {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
   }
-
-  .services .service {
-    padding: 70% 5%;
-  }
-
-  .services .cherry p,
-  .orange p {
-    bottom: 10px;
-    max-width: 340px;
-  }
-
-  .services .cherry {
-    background: url("/src/img/mobile/image-graphic-design.jpg") center center
-      no-repeat;
-    background-size: cover;
-  }
-
-  .services .orange {
-    background: url("/src/img/mobile/image-photography.jpg") center center
-      no-repeat;
-    background-size: cover;
-  } */
 
   /* CLIENT-TESTIMONIALS */
 
@@ -164,5 +131,23 @@
   .projects {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .about .item {
+    padding: 10%;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    margin: 0 20%;
   }
 }
