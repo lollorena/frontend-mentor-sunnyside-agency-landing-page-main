@@ -26,6 +26,10 @@
     z-index: 1;
   }
 
+  .header nav ul .btn {
+    color: darkgrey;
+  }
+
   .header nav ul li {
     text-align: center;
     padding: 10px;
@@ -33,6 +37,7 @@
   }
 
   .header nav ul li:hover {
+    border-radius: 30px;
     background-color: orange;
   }
 
@@ -135,8 +140,13 @@
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+}
 
+@media (max-width: 1000px) {
   .about .item {
     padding: 10%;
   }
@@ -149,5 +159,6 @@
 @media (min-width: 1920px) {
   body {
     margin: 0 20%;
+    background-color: #3DBFFF;
   }
 }
